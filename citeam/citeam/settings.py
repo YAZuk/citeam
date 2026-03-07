@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'main.apps.MainConfig',
 ]
 
 MIDDLEWARE = [
@@ -79,13 +80,13 @@ DATABASES = {
     #     'NAME': BASE_DIR / 'db.sqlite3',
     # }
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'citeam',
-        'USER': 'postgres',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        # 'HOST': '127.0.0.1',
-        'PORT': '5432',
+    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #     'NAME': 'citeam',
+    #     'USER': 'postgres',
+    #     'PASSWORD': '',
+    #     'HOST': 'localhost',
+    #     # 'HOST': '127.0.0.1',
+    #     'PORT': '5432',
     #
     #     'ENGINE': 'django.db.backends.mysql',
     #     'NAME': 'u1815100_default',
@@ -96,15 +97,14 @@ DATABASES = {
     #         'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
     #     },
     #
-        # 'ENGINE': 'django.db.backends.mysql',
-        # 'NAME': 'citeam',
-        # 'USER': 'yazuk',
-        # 'PASSWORD': '120359ZaY_!',
-        # 'HOST': 'localhost',
-        # 'OPTIONS': {
-        #     'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-        # },
-    #
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'citeam',
+        'USER': 'yazuk',
+        'PASSWORD': '120359ZaY_!',
+        'HOST': 'localhost',
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        },
     }
 
 }
@@ -132,9 +132,10 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/6.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-ru'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Moscow'
+USE_I18N = True
 
 USE_I18N = True
 
