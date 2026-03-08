@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+</head>
+<body>
+    {% for question in latest_question_list %}
+        {{ question.question_text|linebreaks }}
+    {% endfor %}
+</body>
+</html>
