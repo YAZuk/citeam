@@ -10,8 +10,11 @@ def index(request):
     latest_question_list = Question.objects.order_by("-pub_date")[:5]
     return render(request, 'main/index.html', {'latest_question_list': latest_question_list})
 
-def detail(request, question_id):
+def detail_id(request, question_id):
     return HttpResponse("You're looking at question %s." % question_id)
+
+def detail(request):
+    return render(request, 'main/detail.html', {})
 
 
 def results(request, question_id):
