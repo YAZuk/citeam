@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-          content="Citeam - разработка программного обеспечения на заказ. C++, Qt, Python, Django, OpenGL, PostgreSQL. Создаем высокопроизводительные приложения.">
+          content="Citeam - разработка программного обеспечения на заказ. C++, Qt, Python, Django, PHP, Laravel, Go, Java, Spring, OpenGL, PostgreSQL. Создаем высокопроизводительные приложения.">
     <title>Citeam - Разработка ПО на заказ</title>
 
     <!-- Bootstrap CSS -->
@@ -58,6 +58,25 @@
         .social-link:hover {
             opacity: 0.8;
         }
+        .counter {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #667eea;
+            display: inline-block;
+            min-width: 80px;
+            transition: all 0.3s;
+            animation: fadeInUp 0.5s ease-out;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body>
@@ -98,8 +117,7 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <h1 class="display-4 fw-bold mb-4">Разработка ПО на заказ</h1>
-                <p class="lead mb-4">Создаем высокопроизводительные приложения на C++, Qt, Python и современных
-                    веб-технологиях</p>
+                <p class="lead mb-4">Создаем высокопроизводительные приложения на C++, Qt, Python, PHP, Go, Java и современных веб-технологиях</p>
                 <div class="d-flex gap-3">
                     <a href="#" class="btn btn-primary btn-lg">Начать проект</a>
                     <a href="#" class="btn btn-outline-secondary btn-lg">Технологии</a>
@@ -126,12 +144,28 @@
                 <p>Django, Bash</p>
             </div>
             <div class="col-md-3 col-6 text-center">
+                <div class="tech-icon">PHP</div>
+                <p>Laravel</p>
+            </div>
+            <div class="col-md-3 col-6 text-center">
+                <div class="tech-icon">Go</div>
+                <p>Golang</p>
+            </div>
+            <div class="col-md-3 col-6 text-center">
+                <div class="tech-icon">Java</div>
+                <p>Spring</p>
+            </div>
+            <div class="col-md-3 col-6 text-center">
                 <div class="tech-icon">PostgreSQL</div>
                 <p>SQLite</p>
             </div>
             <div class="col-md-3 col-6 text-center">
                 <div class="tech-icon">Angular</div>
                 <p>Vue · React</p>
+            </div>
+            <div class="col-md-3 col-6 text-center">
+                <div class="tech-icon">Мобильная</div>
+                <p>Swift, Kotlin</p>
             </div>
         </div>
     </div>
@@ -142,55 +176,67 @@
     <div class="container">
         <h2 class="text-center mb-5">Наши услуги</h2>
         <div class="row g-4">
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="card service-card h-100">
                     <div class="card-body">
                         <h5 class="card-title">Десктопные приложения</h5>
-                        <p class="card-text">C++, Qt, OpenGL - создаем мощные кросс-платформенные приложения с высокой
-                            производительностью.</p>
+                        <p class="card-text">C++, Qt, OpenGL - создаем мощные кросс-платформенные приложения с высокой производительностью.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="card service-card h-100">
                     <div class="card-body">
-                        <h5 class="card-title">Веб-разработка</h5>
-                        <p class="card-text">Django, PostgreSQL, Angular/Vue/React - современные веб-приложения любой
-                            сложности.</p>
+                        <h5 class="card-title">Web на Python</h5>
+                        <p class="card-text">Django, PostgreSQL - современные веб-приложения любой сложности.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="card service-card h-100">
                     <div class="card-body">
-                        <h5 class="card-title">Мобильные приложения</h5>
-                        <p class="card-text">Swift (iOS), Kotlin/Java (Android) - нативные приложения для всех
-                            платформ.</p>
+                        <h5 class="card-title">Web на PHP</h5>
+                        <p class="card-text">Laravel - быстрая разработка надежных веб-сервисов.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
+                <div class="card service-card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Высоконагруженные системы</h5>
+                        <p class="card-text">Go (Golang) - производительные и масштабируемые решения.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card service-card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Корпоративные решения</h5>
+                        <p class="card-text">Java, Spring - надежные enterprise приложения.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
                 <div class="card service-card h-100">
                     <div class="card-body">
                         <h5 class="card-title">Базы данных</h5>
-                        <p class="card-text">Проектирование и оптимизация PostgreSQL, SQLite, работа с большими
-                            данными.</p>
+                        <p class="card-text">Проектирование и оптимизация PostgreSQL, SQLite, работа с большими данными.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="card service-card h-100">
                     <div class="card-body">
-                        <h5 class="card-title">DevOps</h5>
-                        <p class="card-text">Bash скрипты, автоматизация развертывания, настройка серверов.</p>
+                        <h5 class="card-title">Мобильные приложения</h5>
+                        <p class="card-text">Swift (iOS), Kotlin/Java (Android) - нативные приложения.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="card service-card h-100">
                     <div class="card-body">
-                        <h5 class="card-title">Графика и визуализация</h5>
-                        <p class="card-text">OpenGL, шейдеры - создание сложной 2D/3D графики и визуализации данных.</p>
+                        <h5 class="card-title">DevOps & Графика</h5>
+                        <p class="card-text">Bash скрипты, OpenGL, шейдеры - автоматизация и визуализация.</p>
                     </div>
                 </div>
             </div>
@@ -207,20 +253,20 @@
                 <p class="lead mb-4">
                     Мы специализируемся на разработке сложного программного обеспечения
                     с использованием самых современных технологий. Наши эксперты имеют
-                    глубокие знания в C++, Python и веб-технологиях.
+                    глубокие знания в C++, Python, PHP, Go, Java и веб-технологиях.
                 </p>
                 <div class="row mt-5">
                     <div class="col-4">
-                        <h3>50+</h3>
+                        <h3 class="counter" data-target="50">0</h3>
                         <p>Проектов</p>
                     </div>
                     <div class="col-4">
-                        <h3>10+</h3>
+                        <h3 class="counter" data-target="15">0</h3>
                         <p>Технологий</p>
                     </div>
                     <div class="col-4">
-                        <h3>5 лет</h3>
-                        <p>Опыта</p>
+                        <h3 class="counter" data-target="5">0</h3>
+                        <p>Лет опыта</p>
                     </div>
                 </div>
             </div>
@@ -264,5 +310,28 @@
 
 <!-- Bootstrap JS -->
 <script src="/static/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Анимированные счетчики (исправлено) -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const counters = document.querySelectorAll('.counter');
+
+        counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-target'));
+            let current = 0;
+            const increment = Math.ceil(target / 50); // Шаг анимации
+
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    counter.innerText = target;
+                    clearInterval(timer);
+                } else {
+                    counter.innerText = current;
+                }
+            }, 20); // Скорость анимации (чем меньше, тем быстрее)
+        });
+    });
+</script>
 </body>
 </html>
