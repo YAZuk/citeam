@@ -32,15 +32,26 @@
         </div>
 
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Левая колонка</h5>
-                        <p class="card-text">Это колонка на 6 единиц из 12.</p>
+                        <p class="card-text">Это колонка на 4 единиц из 12.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Центральная колонка</h5>
+                        <p class="card-text">Список вопросов из БД.</p>
+                        {% for question in latest_question_list %}
+                            <p class="card-text">{{ question.question_text|linebreaks }}</p>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Правая колонка</h5>
