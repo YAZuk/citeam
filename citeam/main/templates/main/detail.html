@@ -77,6 +77,73 @@
                 transform: translateY(0);
             }
         }
+
+        /* Адаптивность для мобильных устройств */
+        @media (max-width: 991px) {
+            .hero {
+                padding: 3rem 0;
+                text-align: center;
+            }
+
+            .hero .row {
+                flex-direction: column-reverse; /* Картинка сверху, текст снизу */
+            }
+
+            .hero .col-lg-6:first-child {
+                margin-top: 2rem;
+            }
+
+            .hero .d-flex {
+                justify-content: center;
+            }
+
+            .hero img {
+                max-width: 80%;
+                margin: 0 auto;
+                display: block;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                padding: 2rem 0;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero .d-flex {
+                flex-direction: column;
+                gap: 1rem !important;
+                align-items: center;
+            }
+
+            .hero .btn {
+                width: 100%;
+                max-width: 280px;
+            }
+
+            .hero img {
+                max-width: 100%;
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        /* Отступы для секций на мобильных */
+        @media (max-width: 768px) {
+            .tech-stack {
+                padding: 2rem 0;
+            }
+
+            .service-card {
+                margin-bottom: 1rem;
+            }
+
+            .counter {
+                font-size: 2.2rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -111,20 +178,23 @@
     </div>
 </nav>
 
-<!-- Hero секция -->
+<!-- Hero секция (исправленная адаптивность) -->
 <section class="hero">
     <div class="container">
-        <div class="row align-items-center">
+        <div class="row align-items-center g-5"> <!-- g-5 добавляет отступы между колонками -->
             <div class="col-lg-6">
                 <h1 class="display-4 fw-bold mb-4">Разработка ПО на заказ</h1>
                 <p class="lead mb-4">Создаем высокопроизводительные приложения на C++, Qt, Python, PHP, Go, Java и современных веб-технологиях</p>
-                <div class="d-flex gap-3">
-                    <a href="#" class="btn btn-primary btn-lg">Начать проект</a>
-                    <a href="#" class="btn btn-outline-secondary btn-lg">Технологии</a>
+                <div class="d-flex gap-3 flex-wrap">
+                    <a href="#" class="btn btn-primary btn-lg px-4 py-3">Начать проект</a>
+                    <a href="#" class="btn btn-outline-secondary btn-lg px-4 py-3">Технологии</a>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <img src="/static/bootstrap/images/2.jpg" alt="Разработка ПО команда Citeam" class="img-fluid rounded">
+            <div class="col-lg-6 text-center text-lg-start">
+                <img src="/static/bootstrap/images/2.jpg"
+                     alt="Разработка ПО команда Citeam"
+                     class="img-fluid rounded shadow-lg"
+                     style="max-width: 100%; height: auto;">
             </div>
         </div>
     </div>
@@ -177,7 +247,7 @@
         <h2 class="text-center mb-5">Наши услуги</h2>
         <div class="row g-4">
             <div class="col-md-3">
-                <div class="card service-card h-100">
+                <div class="card service-card h-100 px-3">
                     <div class="card-body">
                         <h5 class="card-title">Десктопные приложения</h5>
                         <p class="card-text">C++, Qt, OpenGL - создаем мощные кросс-платформенные приложения с высокой производительностью.</p>
@@ -185,7 +255,7 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="card service-card h-100">
+                <div class="card service-card h-100 px-3">
                     <div class="card-body">
                         <h5 class="card-title">Web на Python</h5>
                         <p class="card-text">Django, PostgreSQL - современные веб-приложения любой сложности.</p>
@@ -193,7 +263,7 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="card service-card h-100">
+                <div class="card service-card h-100 px-3">
                     <div class="card-body">
                         <h5 class="card-title">Web на PHP</h5>
                         <p class="card-text">Laravel - быстрая разработка надежных веб-сервисов.</p>
@@ -201,7 +271,7 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="card service-card h-100">
+                <div class="card service-card h-100 px-3">
                     <div class="card-body">
                         <h5 class="card-title">Высоконагруженные системы</h5>
                         <p class="card-text">Go (Golang) - производительные и масштабируемые решения.</p>
@@ -209,7 +279,7 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="card service-card h-100">
+                <div class="card service-card h-100 px-3">
                     <div class="card-body">
                         <h5 class="card-title">Корпоративные решения</h5>
                         <p class="card-text">Java, Spring - надежные enterprise приложения.</p>
@@ -217,7 +287,7 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="card service-card h-100">
+                <div class="card service-card h-100 px-3">
                     <div class="card-body">
                         <h5 class="card-title">Базы данных</h5>
                         <p class="card-text">Проектирование и оптимизация PostgreSQL, SQLite, работа с большими данными.</p>
@@ -225,7 +295,7 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="card service-card h-100">
+                <div class="card service-card h-100 px-3">
                     <div class="card-body">
                         <h5 class="card-title">Мобильные приложения</h5>
                         <p class="card-text">Swift (iOS), Kotlin/Java (Android) - нативные приложения.</p>
@@ -233,7 +303,7 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="card service-card h-100">
+                <div class="card service-card h-100 px-3">
                     <div class="card-body">
                         <h5 class="card-title">DevOps & Графика</h5>
                         <p class="card-text">Bash скрипты, OpenGL, шейдеры - автоматизация и визуализация.</p>
@@ -311,7 +381,7 @@
 <!-- Bootstrap JS -->
 <script src="/static/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-<!-- Анимированные счетчики (исправлено) -->
+<!-- Анимированные счетчики -->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const counters = document.querySelectorAll('.counter');
@@ -329,7 +399,7 @@
                 } else {
                     counter.innerText = current;
                 }
-            }, 20); // Скорость анимации (чем меньше, тем быстрее)
+            }, 20); // Скорость анимации
         });
     });
 </script>
