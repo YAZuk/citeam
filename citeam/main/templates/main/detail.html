@@ -143,6 +143,37 @@
             .counter {
                 font-size: 2.2rem;
             }
+
+            .contact-buttons {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .contact-buttons .btn {
+                width: 100%;
+            }
+        }
+
+        /* Стили для контактов */
+        .contact-info {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+        }
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        .contact-info a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+        .contact-icon {
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
         }
     </style>
 </head>
@@ -178,10 +209,10 @@
     </div>
 </nav>
 
-<!-- Hero секция (исправленная адаптивность) -->
+<!-- Hero секция -->
 <section class="hero">
     <div class="container">
-        <div class="row align-items-center g-5"> <!-- g-5 добавляет отступы между колонками -->
+        <div class="row align-items-center g-5">
             <div class="col-lg-6">
                 <h1 class="display-4 fw-bold mb-4">Разработка ПО на заказ</h1>
                 <p class="lead mb-4">Создаем высокопроизводительные приложения на C++, Qt, Python, PHP, Go, Java и современных веб-технологиях</p>
@@ -344,32 +375,69 @@
     </div>
 </section>
 
-<!-- Контакты -->
+<!-- Контакты (обновлено с телефоном и Telegram) -->
 <section class="py-5">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 mx-auto text-center">
                 <h2 class="mb-4">Свяжитесь с нами</h2>
-                <p class="mb-4">Готовы обсудить ваш проект? Напишите нам!</p>
-                <a href="mailto:info@citeam.ru" class="btn btn-primary btn-lg">info@citeam.ru</a>
+                <p class="mb-4">Готовы обсудить ваш проект? Напишите нам или позвоните!</p>
+
+                <!-- Основные контакты -->
+                <div class="d-flex flex-column gap-3 mb-4">
+                    <a href="mailto:info@citeam.ru" class="btn btn-primary btn-lg">
+                        ✉️ info@citeam.ru
+                    </a>
+                    <a href="tel:+79997234966" class="btn btn-outline-primary btn-lg">
+                        📞 +7 (999) 723-49-66
+                    </a>
+                    <a href="https://t.me/yazuk85" target="_blank" class="btn btn-outline-primary btn-lg">
+                        📱 Telegram: @yazuk85
+                    </a>
+                </div>
+
+                <!-- Дополнительная контактная информация -->
+                <div class="contact-info mt-4">
+                    <h4 class="mb-3">Быстрая связь</h4>
+                    <div class="d-flex justify-content-center gap-4 flex-wrap">
+                        <div>
+                            <span class="contact-icon">📞</span>
+                            <a href="tel:+79997234966">+7 (999) 723-49-66</a>
+                        </div>
+                        <div>
+                            <span class="contact-icon">✉️</span>
+                            <a href="mailto:info@citeam.ru">info@citeam.ru</a>
+                        </div>
+                        <div>
+                            <span class="contact-icon">📱</span>
+                            <a href="https://t.me/yazuk85" target="_blank">@yazuk85</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Футер -->
+<!-- Футер (обновлен с контактами) -->
 <footer class="bg-dark text-white py-4">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <p>© 2026 Citeam. Все права защищены.</p>
             </div>
-            <div class="col-md-6 text-md-end">
+            <div class="col-md-4 text-center">
                 <p>Разработка ПО на заказ</p>
             </div>
+            <div class="col-md-4 text-md-end">
+                <p>
+                    <a href="tel:+79997234966" class="text-white text-decoration-none">📞 +7 (999) 723-49-66</a><br>
+                    <a href="https://t.me/yazuk85" target="_blank" class="text-white text-decoration-none">📱 @yazuk85</a>
+                </p>
+            </div>
         </div>
-        <div class="row">
-            <div class="col-md-12 text-center mt-3">
+        <div class="row mt-3">
+            <div class="col-md-12 text-center">
                 <a href="#" class="text-white me-3 social-link">Telegram</a>
                 <a href="#" class="text-white me-3 social-link">GitHub</a>
                 <a href="#" class="text-white social-link">LinkedIn</a>
@@ -389,7 +457,7 @@
         counters.forEach(counter => {
             const target = parseInt(counter.getAttribute('data-target'));
             let current = 0;
-            const increment = Math.ceil(target / 50); // Шаг анимации
+            const increment = Math.ceil(target / 50);
 
             const timer = setInterval(() => {
                 current += increment;
@@ -399,7 +467,7 @@
                 } else {
                     counter.innerText = current;
                 }
-            }, 20); // Скорость анимации
+            }, 20);
         });
     });
 </script>
