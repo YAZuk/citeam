@@ -1,11 +1,59 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <title>Index</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    {% for question in latest_question_list %}-->
+<!--        {{ question.question_text|linebreaks }}-->
+<!--    {% endfor %}-->
+<!--</body>-->
+<!--</html>-->
+
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <title>Index</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой сайт</title>
+
+    <!-- Bootstrap CSS - правильный путь -->
+    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body { padding-top: 20px; }
+    </style>
 </head>
 <body>
-    {% for question in latest_question_list %}
-        {{ question.question_text|linebreaks }}
-    {% endfor %}
+    <div class="container">
+        <div class="alert alert-success">
+            <h1>Bootstrap работает!</h1>
+            <p>Если вы видите эту красивую зеленую плашку, значит Bootstrap подключен правильно.</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Левая колонка</h5>
+                        <p class="card-text">Это колонка на 6 единиц из 12.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Правая колонка</h5>
+                        <p class="card-text">Bootstrap использует сетку из 12 колонок.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn btn-primary mt-3">Кнопка Bootstrap</button>
+    </div>
+
+    <!-- Bootstrap JS (для интерактивных компонентов) -->
+    <script src="/static/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
